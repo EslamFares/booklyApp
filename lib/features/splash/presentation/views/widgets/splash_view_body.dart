@@ -1,16 +1,44 @@
+import 'package:bookly/core/utils/assets.dart';
 import 'package:flutter/material.dart';
+import 'sliding_text.dart';
 
-class SplashViewbody extends StatelessWidget {
+class SplashViewbody extends StatefulWidget {
   const SplashViewbody({super.key});
 
   @override
+  State<SplashViewbody> createState() => _SplashViewbodyState();
+}
+
+class _SplashViewbodyState extends State<SplashViewbody>
+    with SingleTickerProviderStateMixin {
+  late AnimationController animationController;
+  late Animation<Offset> slidingAnimation;
+  @override
+  void initState() {
+    super.initState();
+    animationController =
+        AnimationController(vsync: this, duration: const Duration(seconds: 1));
+    slidingAnimation =
+        Tween<Offset>(begin: const Offset(0, 3), end: Offset.zero)
+            .animate(animationController);
+    animationController.forward();
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    animationController.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.stretch, //take all width
       children: [
-        FlutterLogo(),
-        //lknkl
-        //test push vs code
-        //nmkbn
+        Image.asset(AssetsDatePathes.logoImg),
+        const SizedBox(height: 5),
+        SlidingText(slidingAnimation: slidingAnimation)
       ],
     );
   }
