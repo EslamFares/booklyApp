@@ -8,6 +8,9 @@ class SplashViewbody extends StatelessWidget {
     return const Column(
       children: [
         FlutterLogo(),
+        //lknkl
+        //test push vs code
+        //nmkbn
       ],
     );
   }
