@@ -1,6 +1,8 @@
+import 'package:bookly/core/utils/app_router.dart';
 import 'package:bookly/core/utils/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:go_router/go_router.dart';
 
 class CustomHomeAppBar extends StatelessWidget {
   const CustomHomeAppBar({super.key});
@@ -14,7 +16,9 @@ class CustomHomeAppBar extends StatelessWidget {
         children: [
           Image.asset(AssetsPathes.logoImg, width: 85),
           IconButton(
-              onPressed: () {},
+              onPressed: () {
+                GoRouter.of(context).push(AppRouter.kSearchView);
+              },
               icon: const FaIcon(FontAwesomeIcons.magnifyingGlass, size: 22),
               splashRadius: 24)
         ],
