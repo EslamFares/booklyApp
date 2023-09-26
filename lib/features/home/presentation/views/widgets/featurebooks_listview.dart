@@ -10,6 +10,7 @@ class FeaturedBooksListView extends StatelessWidget {
       height: MediaQuery.of(context).size.height * .3,
       child: ListView.builder(
         itemCount: 5,
+        physics: const BouncingScrollPhysics(),
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) => const Padding(
           padding: EdgeInsets.only(right: 8),

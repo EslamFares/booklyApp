@@ -35,7 +35,7 @@ class _SplashViewbodyState extends State<SplashViewbody>
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.stretch, //take all width
       children: [
-        Image.asset(AssetsDatePathes.logoImg),
+        Image.asset(AssetsPathes.logoImg),
         const SizedBox(height: 5),
         SlidingText(slidingAnimation: slidingAnimation)
       ],
@@ -54,7 +54,7 @@ class _SplashViewbodyState extends State<SplashViewbody>
   void navigateToHome() {
     Future.delayed(const Duration(seconds: 2), () {
       Get.off(() => const HomeView(),
-          transition: Transition.zoom, duration: kTanstionPageDuration);
+          transition: Transition.zoom, duration: Kconst.kTanstionPageDuration);
     });
   }
 }

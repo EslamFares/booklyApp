@@ -9,11 +9,11 @@ class CustomHomeAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Padding(
-        padding: const EdgeInsets.only(right: 16, bottom: 10),
+        padding: const EdgeInsets.only(right: 16, bottom: 10, left: 16),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Image.asset(AssetsDatePathes.logoImg, width: 85),
+            Image.asset(AssetsPathes.logoImg, width: 85),
             IconButton(
                 onPressed: () {},
                 icon: const FaIcon(FontAwesomeIcons.magnifyingGlass, size: 22),
