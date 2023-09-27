@@ -37,7 +37,7 @@ class SearchResultListView extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const SizedBox(height: 30),
-        const Text('Result', style: KStyles.textStyle18),
+        const Text('Search Result', style: KStyles.textStyle18),
         const SizedBox(height: 10),
         Expanded(
           child: ListView.builder(

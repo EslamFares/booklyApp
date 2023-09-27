@@ -22,6 +22,7 @@ class BooklyApp extends StatelessWidget {
         appBarTheme: const AppBarTheme(
             backgroundColor: Kconst.kPrimaryColor, elevation: 0),
       ),
+
       // home: const SplashView(),
     );
   }
