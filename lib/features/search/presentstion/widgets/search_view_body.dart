@@ -1,6 +1,6 @@
 import 'package:bookly/core/utils/styles.dart';
 import 'package:bookly/core/widgets/custom_back_button.dart';
-import 'package:bookly/features/home/presentation/views/widgets/bestseller_list_item.dart';
+import 'package:bookly/features/home/presentation/views/widgets/newestbooks_list_item.dart';
 import 'package:bookly/features/search/presentstion/widgets/custom_search_textfield.dart';
 import 'package:flutter/material.dart';
 
