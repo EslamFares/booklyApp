@@ -1,3 +1,4 @@
+import 'package:bookly/core/utils/launch_url.dart';
 import 'package:bookly/features/home/data/models/book_model/book_model.dart';
 import 'package:bookly/features/home/presentation/views/widgets/book_details_section.dart';
 import 'package:bookly/features/home/presentation/views/widgets/custom_bookdetails_appbar.dart';
@@ -21,7 +22,14 @@ class BookDetailsViewBody extends StatelessWidget {
                 BookDetailsSection(book: book),
                 const SizedBox(height: 20),
                 BooksActionButton(
-                    price: book.volumeInfo!.pageCount!.toDouble()),
+                  previewTextButton: book.volumeInfo!.previewLink != null
+                      ? 'Free preview'
+                      : 'Not Avaliable',
+                  price: book.volumeInfo!.pageCount!.toDouble(),
+                  onTapPreview: () {
+                    launchCustomUrl(context, book.volumeInfo!.previewLink!);
+                  },
+                ),
                 const SizedBox(height: 50),
                 const SimilerBooksSection()
               ],

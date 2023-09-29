@@ -46,7 +46,7 @@ class BookListItem extends StatelessWidget {
                       ),
                       const SizedBox(height: 3),
                       Text(
-                        book.volumeInfo!.authors![0],
+                        book.volumeInfo!.authors?[0] ?? 'UnKown',
                         style: KStyles.textStyle14
                             .copyWith(color: Kconst.kGreyTextColor),
                       ),
