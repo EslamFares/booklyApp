@@ -1,6 +1,5 @@
 import 'package:bookly/constants.dart';
 import 'package:bookly/core/utils/app_router.dart';
-import 'package:bookly/core/utils/assets.dart';
 import 'package:bookly/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -32,9 +31,7 @@ class BookListItem extends StatelessWidget {
                       borderRadius: BorderRadius.circular(8),
                       image: const DecorationImage(
                         fit: BoxFit.fill,
-                        image: AssetImage(
-                          AssetsPathes.tetsImg,
-                        ),
+                        image: NetworkImage(Kconst.imgUrlTest),
                       ),
                     ),
                   ),

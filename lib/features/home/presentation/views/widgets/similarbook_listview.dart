@@ -1,3 +1,4 @@
+import 'package:bookly/constants.dart';
 import 'package:flutter/material.dart';
 
 import 'custom_book_img.dart';
@@ -16,7 +17,7 @@ class SimilarBookListView extends StatelessWidget {
           scrollDirection: Axis.horizontal,
           itemBuilder: (BuildContext context, int index) => const Padding(
                 padding: EdgeInsets.only(right: 8),
-                child: CustomBookImg(),
+                child: CustomBookImg(Kconst.imgUrlTest),
               )),
     );
   }
