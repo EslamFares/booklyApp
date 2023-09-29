@@ -2,13 +2,14 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class CustomBookImg extends StatelessWidget {
-  const CustomBookImg(this.imgUrl, {super.key});
+class CustomNetWorkImg extends StatelessWidget {
+  const CustomNetWorkImg(this.imgUrl, {super.key, this.aspectRatio});
   final String imgUrl;
+  final double? aspectRatio;
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
-      aspectRatio: .65,
+      aspectRatio: aspectRatio ?? .65,
       child: Material(
         color: Colors.transparent,
         borderRadius: BorderRadius.circular(14),

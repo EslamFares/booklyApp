@@ -7,4 +7,6 @@ abstract class HomeRepo {
   // teams detect what method will do in screen (mn 3'ir m8olh)
   Future<Either<Failure, List<BookModel>>> fetchNewestBooks();
   Future<Either<Failure, List<BookModel>>> fetchFeaturedBooks();
+  Future<Either<Failure, List<BookModel>>> fetchSimilerBooks(
+      {required String category});
 }

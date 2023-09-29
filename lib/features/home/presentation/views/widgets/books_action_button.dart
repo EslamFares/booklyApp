@@ -2,8 +2,8 @@ import 'package:bookly/core/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 
 class BooksActionButton extends StatelessWidget {
-  const BooksActionButton({super.key});
-
+  const BooksActionButton({required this.price, super.key});
+  final double price;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -11,7 +11,7 @@ class BooksActionButton extends StatelessWidget {
       child: Row(
         children: [
           BookButtonAction(
-            text: '19.99€',
+            text: '$price €',
             onTap: () {
               debugPrint('19.99€');
             },

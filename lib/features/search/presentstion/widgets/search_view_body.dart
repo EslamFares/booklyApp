@@ -1,5 +1,6 @@
 import 'package:bookly/core/utils/styles.dart';
 import 'package:bookly/core/widgets/custom_back_button.dart';
+import 'package:bookly/features/home/data/models/book_model/book_model.dart';
 import 'package:bookly/features/home/presentation/views/widgets/newestbooks_list_item.dart';
 import 'package:bookly/features/search/presentstion/widgets/custom_search_textfield.dart';
 import 'package:flutter/material.dart';
@@ -44,7 +45,7 @@ class SearchResultListView extends StatelessWidget {
               itemCount: 15,
               padding: EdgeInsets.zero,
               physics: const BouncingScrollPhysics(),
-              itemBuilder: (context, index) => const BookListItem()),
+              itemBuilder: (context, index) => const BookListItem(BookModel())),
         )
       ],
     );
