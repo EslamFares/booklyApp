@@ -77,11 +77,7 @@ class HomeRepoImpl extends HomeRepo {
               'volumes?Filtering=free-ebooks&Sorting=relevance&q=subject:$searchTExt');
       List<BookModel> books = [];
       for (var item in data['items']) {
-        try {
-          books.add(BookModel.fromJson(item));
-        } on Exception catch (e) {
-          print(e.toString() + item);
-        }
+        books.add(BookModel.fromJson(item));
       }
       return right(books);
     } catch (e) {
